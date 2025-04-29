@@ -10,7 +10,6 @@ async def connect():
             api_key=os.getenv('VIAM_API_KEY'),
             api_key_id=os.getenv('VIAM_API_KEY_ID')
     )
-    opts.dial_options = DialOptions(disable_webrtc=True)
     return await RobotClient.at_address('test-and-development-main.yqlop2my9p.viam.cloud', opts)
 
 async def main():
